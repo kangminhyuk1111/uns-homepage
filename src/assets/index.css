@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 커스텀 애니메이션 효과 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 애니메이션 클래스 */
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.5s ease-out;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+/* 전역 스타일 */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    @apply text-gray-800;
+    @apply antialiased;
+}
+
+/* 전체 너비 컨테이너 */
+.container-full {
+    width: 100%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* 컨테이너에 추가 여백 */
+.container {
+    max-width: 1600px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+/* 섹션 간격 일관성 */
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+/* 버튼 스타일 */
+.btn {
+    @apply px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+.btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-outline {
+    @apply border border-blue-600 text-blue-600 hover:bg-blue-50;
+}
+
+/* 텍스트 스타일 */
+h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    @apply leading-tight;
+}
+
+h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+    @apply text-3xl md:text-4xl;
+}
+
+h3 {
+    @apply text-2xl md:text-3xl;
+}
+
+h4 {
+    @apply text-xl md:text-2xl;
+}
+
+/* 카드 스타일 */
+.card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1;
+}
+
+/* 그리드 갭 기본값 */
+.grid {
+    @apply gap-4 md:gap-6 lg:gap-8;
+}
+
+/* 헤더 스티키 스타일 */
+.header-sticky {
+    @apply fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-95 shadow-md transition-all duration-300;
+}
+
+/* 푸터 스타일 */
+.footer-link {
+    @apply text-gray-400 hover:text-white transition;
+}
+
+/* 드롭다운 메뉴 애니메이션 */
+.dropdown-enter-active,
+.dropdown-leave-active {
+    transition: all 0.3s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+router-link {
+    cursor: pointer;
+}
