@@ -4,7 +4,7 @@
       title="Baro Pop"
       description="AI를 이용하여 대기시간을 보다 정확하게 실시간으로 표출하는 클라우드 기반의 전광판 솔루션입니다."
       category="환자 경험 향상 솔루션"
-      color="sky"
+      color="cyan"
       :features="features"
       :caseStudies="caseStudies"
       :faqs="faqs"

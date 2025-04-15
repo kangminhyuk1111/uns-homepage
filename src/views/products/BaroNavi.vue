@@ -4,7 +4,7 @@
       title="Baro Navi"
       description="병원을 방문하는 환자, 보호자가 원내 채혈실, 검사실 등으로 가는 길을 휴대폰 카메라를 이용해 안내 받을 수 있는 원내 길안내 앱입니다."
       category="환자 경험 향상 솔루션"
-      color="teal"
+      color="green"
       :features="features"
       :caseStudies="caseStudies"
       :faqs="faqs"

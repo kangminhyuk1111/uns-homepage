@@ -4,7 +4,7 @@
       title="Baro Talk"
       description="의료진 전용 모바일 메신저로 높은 보안성과 함께 원활한 커뮤니케이션을 제공합니다."
       category="의료 커뮤니케이션 솔루션"
-      color="blue"
+      color="cobalt"
       :features="features"
       :caseStudies="caseStudies"
       :faqs="faqs"

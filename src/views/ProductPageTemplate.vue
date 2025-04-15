@@ -7,7 +7,7 @@
     <!-- 컨텐츠 영역 - 헤더 높이만큼 여백 추가 -->
     <div class="pt-20">
       <!-- 제품 히어로 섹션 -->
-      <section :class="`py-16 md:py-24 bg-${color}-50`">
+      <section :class="`py-16 md:py-24 bg-${color}-100`">
         <div class="container-layout mx-auto px-4">
           <div class="flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">

@@ -4,7 +4,7 @@
       title="Baro Kiosk"
       description="안드로이드 기반 기기로 QR 출력 및 스캔이 가능하여 출입관리 및 물품관리에 사용이 용이한 키오스크입니다."
       category="관리 효율화 솔루션"
-      color="cyan"
+      color="teal"
       :features="features"
       :caseStudies="caseStudies"
       :faqs="faqs"

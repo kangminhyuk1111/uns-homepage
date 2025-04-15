@@ -4,7 +4,7 @@
       title="Baro Safe"
       description="바코드/RFID를 이용한 환자 안전 확보와 간호 업무 효율 향상 시스템입니다."
       category="환자 안전 솔루션"
-      color="lightBlue"
+      color="blue"
       :features="features"
       :caseStudies="caseStudies"
       :faqs="faqs"

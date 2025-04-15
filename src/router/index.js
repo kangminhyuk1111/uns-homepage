@@ -11,7 +11,7 @@ const BaroNavi = () => import('../views/products/BaroNavi.vue');
 const BaroSafe = () => import('../views/products/BaroSafe.vue');
 const BaroChart = () => import('../views/products/BaroChart.vue');
 const BaroTalk = () => import('../views/products/BaroTalk.vue');
-// const BaroCall = () => import('../views/BaroCall.vue');
+const BaroCall = () => import('../views/products/BaroCall.vue');
 
 const routes = [
     {
@@ -59,11 +59,11 @@ const routes = [
         name: 'BaroTalk.vue',
         component: BaroTalk
     },
-    // {
-    //     path: '/products/baro-call',
-    //     name: 'BaroCall',
-    //     component: BaroCall
-    // }
+    {
+        path: '/products/baro-call',
+        name: 'BaroCall',
+        component: BaroCall
+    }
 ];
 
 const router = createRouter({
