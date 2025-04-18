@@ -41,6 +41,7 @@
         </div>
       </section>
 
+
       <!-- 주요 기능 섹션 -->
       <section class="py-16 bg-white">
         <div class="container-layout mx-auto px-4">
@@ -53,15 +54,33 @@
             <div
                 v-for="(feature, index) in features"
                 :key="index"
-                :class="`p-6 rounded-lg border border-${color}-200 hover:bg-${color}-50 transition-all duration-300`"
+                :class="`relative p-8 rounded-xl border border-${color}-200 bg-white hover:shadow-xl hover:scale-105 transform transition-all duration-300 overflow-hidden group`"
             >
-              <div :class="`w-12 h-12 rounded-full bg-${color}-100 flex items-center justify-center mb-4`">
-                <svg xmlns="http://www.w3.org/2000/svg" :class="`h-6 w-6 text-${color}-600`" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
+              <!-- 배경 액센트 효과 -->
+              <div :class="`absolute -right-4 -bottom-4 w-24 h-24 rounded-full bg-${color}-100 opacity-50 group-hover:opacity-80 transition-all duration-300`"></div>
+
+              <!-- 아이콘 -->
+              <div :class="`relative z-10 w-16 h-16 rounded-full bg-${color}-100 flex items-center justify-center mb-6 shadow-sm group-hover:bg-${color}-200 transition-all duration-300`">
+                <slot :name="`feature-icon-${index}`">
+                  <svg xmlns="http://www.w3.org/2000/svg" :class="`h-8 w-8 text-${color}-600`" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </slot>
               </div>
-              <h3 class="text-xl text-gray-800 font-bold mb-2">{{ feature.title }}</h3>
-              <p class="text-gray-600">{{ feature.description }}</p>
+
+              <!-- 콘텐츠 -->
+              <div class="relative z-10">
+                <h3 class="text-xl text-gray-800 font-bold mb-3 group-hover:text-${color}-700 transition-colors duration-300">{{ feature.title }}</h3>
+                <p class="text-gray-600 mb-4 line-clamp-3">{{ feature.description }}</p>
+              </div>
+
+              <!-- 추가 세부 정보 (접을 수 있음) -->
+              <div
+                  v-if="feature.showDetails"
+                  class="relative z-10 mt-4 pt-4 border-t border-${color}-100"
+              >
+                <p class="text-gray-600">{{ feature.additionalInfo || '추가 정보가 준비되지 않았습니다.' }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -185,8 +204,8 @@
 
 <script>
 import { ref } from 'vue';
-import MainHeader from '../components/MainHeader.vue';
-import SiteFooter from '../components/SiteFooter.vue';
+import MainHeader from '../../components/main/MainHeader.vue';
+import SiteFooter from '../../components/SiteFooter.vue';
 
 export default {
   name: 'ProductPageTemplate',

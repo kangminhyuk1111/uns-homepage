@@ -110,9 +110,9 @@
 </template>
 
 <script>
-import MainHeader from '../components/MainHeader.vue';
-import ProductCard from '../components/ProductCard.vue';
-import SiteFooter from '../components/SiteFooter.vue';
+import MainHeader from '../../components/main/MainHeader.vue';
+import ProductCard from '../../components/ProductCard.vue';
+import SiteFooter from '../../components/SiteFooter.vue';
 
 export default {
   name: 'ProductsOverview',

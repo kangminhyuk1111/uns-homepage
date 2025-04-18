@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import ProductPageTemplate from '../ProductPageTemplate.vue';
+import ProductPageTemplate from '../templates/ProductPageTemplate.vue';
 
 export default {
   name: 'BaroPaper',

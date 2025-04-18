@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import ProductPageTemplate from '../../views/ProductPageTemplate.vue';
+import ProductPageTemplate from '../templates/ProductPageTemplate.vue';
 
 export default {
   name: 'BaroSafe',

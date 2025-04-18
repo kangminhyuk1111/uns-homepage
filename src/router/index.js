@@ -1,7 +1,7 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
-import ProductsOverview from '../views/ProductsOverview.vue';
-import Home from "@/components/Home.vue";
+import ProductsOverview from '../views/templates/ProductsOverview.vue';
+import Home from "@/components/main/Home.vue";
 
 // 제품 상세 페이지 동적으로 불러오기
 const BaroPaper = () => import('../views/products/BaroPaper.vue');

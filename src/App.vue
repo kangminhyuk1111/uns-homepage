@@ -9,7 +9,7 @@
 
 <script>
 import { ref } from 'vue';
-import MainHeader from './components/MainHeader.vue';
+import MainHeader from './components/main/MainHeader.vue';
 
 export default {
   name: 'App',

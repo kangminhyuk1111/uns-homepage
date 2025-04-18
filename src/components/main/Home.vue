@@ -193,10 +193,10 @@
 <script>
 import { ref } from 'vue';
 import MainHeroSection from './MainHeroSection.vue';
-import ProductCard from './ProductCard.vue';
-import MedicalDashboard from './MedicalDashboard.vue';
+import ProductCard from '../ProductCard.vue';
+import MedicalDashboard from '../MedicalDashboard.vue';
 import CtaSection from './CtaSection.vue';
-import SiteFooter from './SiteFooter.vue';
+import SiteFooter from '../SiteFooter.vue';
 
 export default {
   name: 'Home',

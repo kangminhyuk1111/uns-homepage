@@ -134,9 +134,6 @@
       </nav>
 
       <div class="flex space-x-4">
-        <button class="hidden md:block px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-200">
-          로그인
-        </button>
         <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
           데모 신청
         </button>
