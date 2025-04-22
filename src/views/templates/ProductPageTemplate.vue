@@ -86,8 +86,92 @@
         </div>
       </section>
 
+      <!-- 하드웨어 사양 섹션 -->
+      <section v-if="hardwareSpecs" :class="`py-16 bg-${color}-50`">
+        <div class="container-layout mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl text-gray-800 font-bold mb-4">하드웨어 사양</h2>
+            <p class="text-lg text-gray-600 max-w-4xl mx-auto">{{ hardwareSpecs.title }}</p>
+          </div>
+
+          <div class="max-w-7xl mx-auto">
+            <!-- 하드웨어 사양 레이아웃 선택 옵션 -->
+            <div class="mb-6 flex justify-center">
+              <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button
+                    type="button"
+                    @click="specLayout = 'cards'"
+                    :class="`px-4 py-2 text-sm font-medium rounded-l-lg ${specLayout === 'cards' ? `bg-${color}-600 text-white` : 'bg-white text-gray-700 hover:bg-gray-100'}`"
+                >
+                  카드 보기
+                </button>
+                <button
+                    type="button"
+                    @click="specLayout = 'table'"
+                    :class="`px-4 py-2 text-sm font-medium rounded-r-lg ${specLayout === 'table' ? `bg-${color}-600 text-white` : 'bg-white text-gray-700 hover:bg-gray-100'}`"
+                >
+                  표 보기
+                </button>
+              </div>
+            </div>
+
+            <!-- 카드 레이아웃 -->
+            <div v-if="specLayout === 'cards'" class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-6">
+              <div
+                  v-for="(section, sectionIndex) in hardwareSpecs.sections"
+                  :key="sectionIndex"
+                  class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              >
+                <div :class="`bg-${color}-600 px-6 py-3`">
+                  <h3 class="text-lg font-bold text-white">{{ section.title }}</h3>
+                </div>
+                <div class="p-6">
+                  <table class="w-full border-collapse">
+                    <tbody>
+                    <tr
+                        v-for="(spec, specIndex) in section.specs"
+                        :key="specIndex"
+                        :class="specIndex % 2 === 0 ? 'bg-white' : `bg-${color}-50`"
+                        class="border-b border-gray-200 last:border-b-0 hover:bg-gray-50"
+                    >
+                      <th class="py-3 px-4 text-left font-medium text-gray-700 w-1/3">{{ spec.name }}</th>
+                      <td class="py-3 px-4 text-gray-600 w-2/3">{{ spec.value }}</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- 전체 표 레이아웃 -->
+            <div v-if="specLayout === 'table'" class="overflow-hidden bg-white rounded-lg shadow-md">
+              <div v-for="(section, sectionIndex) in hardwareSpecs.sections" :key="sectionIndex" class="mb-8 last:mb-0">
+                <div :class="`bg-${color}-600 px-6 py-3`">
+                  <h3 class="text-lg font-bold text-white">{{ section.title }}</h3>
+                </div>
+                <div class="p-0">
+                  <table class="w-full border-collapse">
+                    <tbody>
+                    <tr
+                        v-for="(spec, specIndex) in section.specs"
+                        :key="specIndex"
+                        :class="specIndex % 2 === 0 ? 'bg-white' : `bg-${color}-50`"
+                        class="border-b border-gray-200 last:border-b-0 hover:bg-gray-50"
+                    >
+                      <th class="py-3 px-6 text-left font-medium text-gray-700 w-1/4">{{ spec.name }}</th>
+                      <td class="py-3 px-6 text-gray-600 w-3/4">{{ spec.value }}</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 적용 사례 섹션 -->
-      <section :class="`py-16 bg-${color}-50`">
+      <section :class="`py-16 bg-${hardwareSpecs ? 'white' : `${color}-100`}`">
         <div class="container-layout mx-auto px-4">
           <div class="text-center mb-12">
             <h2 class="text-3xl text-gray-800 font-bold mb-4">적용 사례</h2>
@@ -241,10 +325,15 @@ export default {
     faqs: {
       type: Array,
       default: () => []
+    },
+    hardwareSpecs: {
+      type: Object,
+      default: null
     }
   },
   setup() {
     const openFaq = ref(null);
+    const specLayout = ref('cards'); // 기본값은 카드 레이아웃
 
     const toggleFaq = (index) => {
       if (openFaq.value === index) {
@@ -264,7 +353,8 @@ export default {
     return {
       openFaq,
       toggleFaq,
-      scrollToContact
+      scrollToContact,
+      specLayout
     };
   }
 };

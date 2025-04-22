@@ -63,56 +63,6 @@
             </div>
           </li>
 
-          <li
-              class="relative group"
-              @mouseenter="handleMouseEnter('solutions')"
-              @mouseleave="handleMouseLeave"
-          >
-            <router-link
-                to="/solutions"
-                :class="`font-medium hover:text-blue-600 py-2 inline-block text-base ${
-                activeDropdown === 'solutions' ? 'text-blue-600' : 'text-gray-700'
-              }`"
-            >
-              솔루션
-              <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  :class="`h-4 w-4 inline-block ml-1 transition-transform duration-200 ${
-                  activeDropdown === 'solutions' ? 'rotate-180' : ''
-                }`"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-              >
-                <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                />
-              </svg>
-            </router-link>
-
-            <!-- 솔루션 드롭다운 메뉴 - 클래스 기반 애니메이션 -->
-            <div class="absolute left-0 right-0 h-4" v-if="activeDropdown === 'solutions'"></div>
-            <div
-                v-if="activeDropdown === 'solutions'"
-                class="dropdown-menu absolute left-1/2 -translate-x-1/2 mt-4 w-72 bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100"
-            >
-              <div class="py-2">
-                <router-link
-                    v-for="item in solutionItems"
-                    :key="item.name"
-                    :to="item.href"
-                    class="block px-5 py-3 hover:bg-blue-50 transition-colors duration-200"
-                >
-                  <div class="flex flex-col">
-                    <span class="font-medium font-bold text-gray-800">{{ item.name }}</span>
-                    <span class="text-xs text-gray-500 mt-0.5">{{ item.desc }}</span>
-                  </div>
-                </router-link>
-              </div>
-            </div>
-          </li>
-
           <li>
             <router-link
                 to="/support"
@@ -175,12 +125,6 @@ export default {
         { name: 'Baro Chart', href: '/products/baro-chart', desc: '모바일 HIS 시스템' },
         { name: 'Baro Talk', href: '/products/baro-talk', desc: '의료진 메신저' },
         { name: 'Baro Call', href: '/products/baro-call', desc: '디지털 너스콜 시스템' }
-      ],
-      // 솔루션 드롭다운 메뉴 아이템
-      solutionItems: [
-        { name: '병원 솔루션', href: '/solutions/hospital', desc: '종합병원을 위한 통합 시스템' },
-        { name: '클리닉 솔루션', href: '/solutions/clinic', desc: '클리닉을 위한 최적화 솔루션' },
-        { name: '약국 솔루션', href: '/solutions/pharmacy', desc: '약국 운영 효율화 시스템' }
       ]
     };
   },

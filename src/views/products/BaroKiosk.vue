@@ -8,6 +8,7 @@
       :features="features"
       :caseStudies="caseStudies"
       :faqs="faqs"
+      :hardwareSpecs="hardwareSpecs"
   >
     <template #icon>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,10 +98,78 @@ export default {
       }
     ];
 
+    // 하드웨어 사양 정보
+    const hardwareSpecs = {
+      title: 'Baro Kiosk SP18 하드웨어 사양',
+      sections: [
+        {
+          title: '디스플레이',
+          specs: [
+            { name: '화면 크기', value: '15.6인치 (18.5인치 옵션 가능)' },
+            { name: '해상도', value: '1920x1080@60Hz' },
+            { name: '화면비', value: '16:9 (와이드)' },
+            { name: '패널 타입', value: 'TFT-LCD, LED' },
+            { name: '터치 방식', value: '10포인트 정전식 터치' },
+            { name: '터치 응답 시간', value: '10ms' },
+            { name: '밝기', value: '250cd/m²' }
+          ]
+        },
+        {
+          title: '시스템 사양',
+          specs: [
+            { name: 'CPU', value: 'Dual-core Cortex-A72 (1.8GHz) + Quad-core Cortex-A53 (1.4GHz)' },
+            { name: '운영체제', value: 'Android 11' },
+            { name: 'RAM', value: '4GB' },
+            { name: '저장 공간', value: '32GB' },
+            { name: '인터페이스', value: 'USB 2개, LAN 1개, DC 전원 1개' }
+          ]
+        },
+        {
+          title: '프린터 사양',
+          specs: [
+            { name: '인쇄 방식', value: '감열식 라벨 프린터' },
+            { name: '인쇄 폭', value: '72mm 유효 인쇄 폭' },
+            { name: '인쇄 속도', value: '80mm/초' },
+            { name: '용지 규격', value: '40mm~79mm 폭 지원' },
+            { name: '용지 절단 방식', value: '자동 용지 절단 (전체/반 절단)' },
+            { name: '프린트 헤드 수명', value: '50km' }
+          ]
+        },
+        {
+          title: '스캐너 사양',
+          specs: [
+            { name: '스캔 코드 지원', value: '1D/2D 바코드, QR 코드' },
+            { name: '읽기 정확도', value: '5mil' },
+            { name: '스캔 각도', value: '기울기 ±55°, 편향 ±55°, 회전 360°' }
+          ]
+        },
+        {
+          title: '전원 및 환경',
+          specs: [
+            { name: '전원', value: 'DC 12V 7A' },
+            { name: '작동 온도', value: '0°C ~ 40°C' },
+            { name: '보관 온도', value: '-20°C ~ 55°C' },
+            { name: '상대 습도', value: '작동 시 80% 이하, 보관 시 90% 이하' },
+            { name: '크기', value: '173mm(W) x 198mm(H)' }
+          ]
+        },
+        {
+          title: '기능 및 인증',
+          specs: [
+            { name: '작동 시간', value: '24/7 연속 운영 가능' },
+            { name: '소비 전력', value: '대기 모드 15W, 작동 모드 48W' },
+            { name: 'IC 카드 지원', value: '내장 IC 카드 리더' },
+            { name: '인증', value: 'KC, CE, FCC' }
+          ]
+        }
+      ]
+    };
+
     return {
       features,
       caseStudies,
-      faqs
+      faqs,
+      hardwareSpecs
     };
   }
 };

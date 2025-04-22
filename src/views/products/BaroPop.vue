@@ -8,6 +8,7 @@
       :features="features"
       :caseStudies="caseStudies"
       :faqs="faqs"
+      :hardwareSpecs="hardwareSpecs"
   >
     <template #icon>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,10 +106,73 @@ export default {
       }
     ];
 
+    // 하드웨어 사양 정보 (2025년 모델 기준)
+    const hardwareSpecs = {
+      title: 'BaroPop 100 하드웨어 사양 (2025년 모델)',
+      sections: [
+        {
+          title: '프로세서 및 시스템',
+          specs: [
+            { name: 'CPU', value: 'Quad Core Cortex-A55 2.0GHz' },
+            { name: 'GPU', value: 'Mali-G31 MP2 850MHz' },
+            { name: 'RAM', value: '4GB LPDDR4' },
+            { name: '저장 공간', value: '32GB eMMC' },
+            { name: '운영체제', value: 'Android 13.0' }
+          ]
+        },
+        {
+          title: '네트워크 및 연결',
+          specs: [
+            { name: 'Wi-Fi', value: '2.4G/5G 듀얼밴드 Wi-Fi (802.11 a/b/g/n/ac)' },
+            { name: 'Bluetooth', value: 'Bluetooth v5.0' },
+            { name: '이더넷', value: '100Mbps' },
+            { name: 'HDMI', value: 'HDMI 2.0, 4K@60fps 지원' },
+            { name: 'USB', value: 'USB 3.0 x 2, USB 2.0 x 1' }
+          ]
+        },
+        {
+          title: '영상 및 오디오',
+          specs: [
+            { name: '비디오 디코딩', value: 'H.265 10-bit 4K@60fps, VP9, H.264' },
+            { name: '비디오 출력', value: '4K UHD (3840x2160)' },
+            { name: '오디오 출력', value: '디지털 오디오 출력(HDMI), 3.5mm 오디오 잭' },
+            { name: '오디오 형식', value: 'MP3, AAC, FLAC, OGG, WAV 지원' }
+          ]
+        },
+        {
+          title: '물리적 특성',
+          specs: [
+            { name: '크기', value: '107 x 107 x 21mm' },
+            { name: '무게', value: '250g' },
+            { name: '전원', value: 'DC 5V/2A' },
+            { name: '작동 온도', value: '0°C ~ 40°C' },
+            { name: '마운팅', value: 'VESA 마운트 지원 (별도 어댑터 필요)' }
+          ]
+        },
+        {
+          title: '보안 및 인증',
+          specs: [
+            { name: '데이터 보안', value: 'AES-256 암호화' },
+            { name: '인증', value: 'KC, CE, FCC 인증' },
+            { name: '원격 관리', value: '클라우드 기반 원격 모니터링 및 관리 지원' },
+            { name: '자동 업데이트', value: 'OTA(Over-The-Air) 업데이트 지원' }
+          ]
+        },
+        {
+          title: '패키지 구성',
+          specs: [
+            { name: '기본 구성품', value: 'BaroPop 100 셋톱박스, 리모컨, 전원 어댑터, HDMI 케이블, 사용자 매뉴얼' },
+            { name: '옵션 액세서리', value: 'VESA 마운트 어댑터, 외장 스피커, 무선 키보드' }
+          ]
+        }
+      ]
+    };
+
     return {
       features,
       caseStudies,
-      faqs
+      faqs,
+      hardwareSpecs
     };
   }
 };
