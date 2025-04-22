@@ -2,6 +2,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import ProductsOverview from '../views/templates/ProductsOverview.vue';
 import Home from "@/components/main/Home.vue";
+import Contact from "@/components/Contact.vue";
+import Support from "@/components/Support.vue";
 
 // 제품 상세 페이지 동적으로 불러오기
 const BaroPaper = () => import('../views/products/BaroPaper.vue');
@@ -18,6 +20,16 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact
+    },
+    {
+        path: '/support',
+        name: 'Support',
+        component: Support
     },
     {
         path: '/products',

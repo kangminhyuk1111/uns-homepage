@@ -74,10 +74,10 @@
 
           <li>
             <router-link
-                to="/about"
+                to="/contact"
                 class="font-medium text-gray-700 hover:text-blue-600 py-2 inline-block text-base"
             >
-              회사소개
+              문의하기
             </router-link>
           </li>
         </ul>
