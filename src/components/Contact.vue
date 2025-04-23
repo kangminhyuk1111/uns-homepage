@@ -43,8 +43,8 @@
                 </div>
                 <div class="ml-4">
                   <h3 class="text-lg font-semibold text-gray-800">전화번호</h3>
-                  <p class="text-gray-600 mt-1">02-1234-5678</p>
-                  <p class="text-gray-500 text-sm mt-1">월-금, 9:00 - 18:00</p>
+                  <p class="text-gray-600 mt-1">02-556-3528</p>
+                  <p class="text-gray-500 text-sm mt-1">월-금, 8:00 - 17:00</p>
                 </div>
               </div>
 
@@ -58,7 +58,7 @@
                 </div>
                 <div class="ml-4">
                   <h3 class="text-lg font-semibold text-gray-800">이메일</h3>
-                  <p class="text-gray-600 mt-1">info@barosolution.com</p>
+                  <p class="text-gray-600 mt-1">mike@unsnetworks.com</p>
                   <p class="text-gray-500 text-sm mt-1">언제든지 문의해주세요</p>
                 </div>
               </div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="ml-4">
                   <h3 class="text-lg font-semibold text-gray-800">주소</h3>
-                  <p class="text-gray-600 mt-1">서울특별시 강남구 테헤란로 123, 바로빌딩 8층</p>
+                  <p class="text-gray-600 mt-1">서울시 강남구 논현로 509 송암빌딩 9층</p>
                 </div>
               </div>
             </div>
@@ -239,8 +239,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 class="text-xl font-semibold text-gray-800 mb-3">주소</h3>
-                <p class="text-gray-600 mb-1">서울특별시 강남구 테헤란로 123</p>
-                <p class="text-gray-600">바로빌딩 8층</p>
+                <p class="text-gray-600 mb-1">서울시 강남구 논현로 509</p>
+                <p class="text-gray-600"> 송암빌딩 9층</p>
               </div>
 
               <div>

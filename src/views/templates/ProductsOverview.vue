@@ -111,7 +111,7 @@
 
 <script>
 import MainHeader from '../../components/main/MainHeader.vue';
-import ProductCard from '../../components/ProductCard.vue';
+import ProductCard from '../../components/card/ProductCard.vue';
 import SiteFooter from '../../components/SiteFooter.vue';
 
 export default {

@@ -193,7 +193,7 @@
 <script>
 import { ref } from 'vue';
 import MainHeroSection from './MainHeroSection.vue';
-import ProductCard from '../ProductCard.vue';
+import ProductCard from '../card/ProductCard.vue';
 import MedicalDashboard from '../MedicalDashboard.vue';
 import CtaSection from './CtaSection.vue';
 import SiteFooter from '../SiteFooter.vue';

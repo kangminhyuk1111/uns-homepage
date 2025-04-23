@@ -71,51 +71,51 @@
     </section>
 
     <!-- 지원 상태 대시보드 -->
-    <section class="py-12 bg-gray-50">
-      <div class="container-layout mx-auto px-4">
-        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="p-6 border-b border-gray-200">
-            <h2 class="text-2xl font-bold text-gray-800">시스템 상태</h2>
-            <p class="text-gray-600 mt-1">Baro 서비스의 현재 운영 상태입니다.</p>
-          </div>
+<!--    <section class="py-12 bg-gray-50">-->
+<!--      <div class="container-layout mx-auto px-4">-->
+<!--        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">-->
+<!--          <div class="p-6 border-b border-gray-200">-->
+<!--            <h2 class="text-2xl font-bold text-gray-800">시스템 상태</h2>-->
+<!--            <p class="text-gray-600 mt-1">Baro 서비스의 현재 운영 상태입니다.</p>-->
+<!--          </div>-->
 
-          <div class="p-6">
-            <div class="space-y-4">
-              <div v-for="(service, index) in services" :key="index" class="flex items-center justify-between py-3 border-b border-gray-100">
-                <div class="flex items-center">
-                  <span class="text-gray-800 font-medium">{{ service.name }}</span>
-                </div>
-                <div class="flex items-center">
-                  <span
-                      :class="[
-                      'inline-block w-3 h-3 rounded-full mr-2',
-                      service.status === 'operational' ? 'bg-green-500' :
-                      service.status === 'maintenance' ? 'bg-yellow-500' : 'bg-red-500'
-                    ]"
-                  ></span>
-                  <span
-                      :class="[
-                      'text-sm font-medium',
-                      service.status === 'operational' ? 'text-green-600' :
-                      service.status === 'maintenance' ? 'text-yellow-600' : 'text-red-600'
-                    ]"
-                  >
-                    {{ service.statusText }}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--          <div class="p-6">-->
+<!--            <div class="space-y-4">-->
+<!--              <div v-for="(service, index) in services" :key="index" class="flex items-center justify-between py-3 border-b border-gray-100">-->
+<!--                <div class="flex items-center">-->
+<!--                  <span class="text-gray-800 font-medium">{{ service.name }}</span>-->
+<!--                </div>-->
+<!--                <div class="flex items-center">-->
+<!--                  <span-->
+<!--                      :class="[-->
+<!--                      'inline-block w-3 h-3 rounded-full mr-2',-->
+<!--                      service.status === 'operational' ? 'bg-green-500' :-->
+<!--                      service.status === 'maintenance' ? 'bg-yellow-500' : 'bg-red-500'-->
+<!--                    ]"-->
+<!--                  ></span>-->
+<!--                  <span-->
+<!--                      :class="[-->
+<!--                      'text-sm font-medium',-->
+<!--                      service.status === 'operational' ? 'text-green-600' :-->
+<!--                      service.status === 'maintenance' ? 'text-yellow-600' : 'text-red-600'-->
+<!--                    ]"-->
+<!--                  >-->
+<!--                    {{ service.statusText }}-->
+<!--                  </span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <div class="bg-gray-50 p-4 text-center">
-            <p class="text-gray-600 text-sm">마지막 업데이트: {{ lastUpdated }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<!--          <div class="bg-gray-50 p-4 text-center">-->
+<!--            <p class="text-gray-600 text-sm">마지막 업데이트: {{ lastUpdated }}</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
 
     <!-- 제품별 FAQ 섹션 -->
-    <section id="faq-section" class="py-16 bg-white">
+    <section id="faq-section" class="py-16 bg-gray-50">
       <div class="container-layout mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-800 mb-3">자주 묻는 질문</h2>
@@ -170,7 +170,7 @@
     </section>
 
     <!-- 기술 지원 요청 섹션 -->
-    <section id="support-ticket" class="py-16 bg-gray-50">
+    <section id="support-ticket" class="py-16 bg-white">
       <div class="container-layout mx-auto px-4">
         <div class="max-w-3xl mx-auto">
           <div class="text-center mb-12">
@@ -293,51 +293,51 @@
       </div>
     </section>
 
-    <!-- 제품 매뉴얼 섹션 -->
-    <section id="manuals" class="py-16 bg-white">
-      <div class="container-layout mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-800 mb-3">제품 매뉴얼</h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">각 제품의 상세 매뉴얼과 가이드를 다운로드하세요.</p>
-        </div>
+<!--    &lt;!&ndash; 제품 매뉴얼 섹션 &ndash;&gt;-->
+<!--    <section id="manuals" class="py-16 bg-white">-->
+<!--      <div class="container-layout mx-auto px-4">-->
+<!--        <div class="text-center mb-12">-->
+<!--          <h2 class="text-3xl font-bold text-gray-800 mb-3">제품 매뉴얼</h2>-->
+<!--          <p class="text-lg text-gray-600 max-w-3xl mx-auto">각 제품의 상세 매뉴얼과 가이드를 다운로드하세요.</p>-->
+<!--        </div>-->
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div v-for="(product, index) in products" :key="index" class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center mr-4">
-                <component :is="getProductIcon(product.id)" class="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 class="text-xl font-bold text-gray-800">{{ product.name }}</h3>
-            </div>
+<!--        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">-->
+<!--          <div v-for="(product, index) in products" :key="index" class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition">-->
+<!--            <div class="flex items-center mb-4">-->
+<!--              <div class="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center mr-4">-->
+<!--                <component :is="getProductIcon(product.id)" class="h-6 w-6 text-blue-600" />-->
+<!--              </div>-->
+<!--              <h3 class="text-xl font-bold text-gray-800">{{ product.name }}</h3>-->
+<!--            </div>-->
 
-            <p class="text-gray-600 mb-6">{{ product.description }}</p>
+<!--            <p class="text-gray-600 mb-6">{{ product.description }}</p>-->
 
-            <div class="space-y-3">
-              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <span>사용자 매뉴얼</span>
-              </a>
+<!--            <div class="space-y-3">-->
+<!--              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />-->
+<!--                </svg>-->
+<!--                <span>사용자 매뉴얼</span>-->
+<!--              </a>-->
 
-              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                <span>설치 가이드 영상</span>
-              </a>
+<!--              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />-->
+<!--                </svg>-->
+<!--                <span>설치 가이드 영상</span>-->
+<!--              </a>-->
 
-              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span>업데이트 기록</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!--              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />-->
+<!--                </svg>-->
+<!--                <span>업데이트 기록</span>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
 
     <!-- 교육 일정 섹션 -->
     <section class="py-16 bg-gray-50">
@@ -404,7 +404,7 @@
                 </svg>
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-2">전화 지원</h3>
-              <p class="text-gray-600 mb-1">02-1234-5678</p>
+              <p class="text-gray-600 mb-1">02-556-3528</p>
               <p class="text-gray-500 text-sm">평일 9:00 - 18:00</p>
             </div>
 
@@ -415,8 +415,8 @@
                 </svg>
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-2">이메일 지원</h3>
-              <p class="text-gray-600 mb-1">support@barosolution.com</p>
-              <p class="text-gray-500 text-sm">24시간 접수 가능</p>
+              <p class="text-gray-600 mb-1">mike@unsnetworks.com</p>
+              <p class="text-gray-500 text-sm">평일 8:00 - 17:00</p>
             </div>
 
             <div class="bg-gray-50 p-6 rounded-xl text-center">
@@ -427,7 +427,7 @@
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-2">실시간 채팅</h3>
               <p class="text-gray-600 mb-1">웹사이트 내 채팅 지원</p>
-              <p class="text-gray-500 text-sm">평일 9:00 - 17:00</p>
+              <p class="text-gray-500 text-sm">평일 8:00 - 17:00</p>
             </div>
           </div>
         </div>
