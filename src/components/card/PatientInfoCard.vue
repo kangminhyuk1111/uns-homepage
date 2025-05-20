@@ -1,6 +1,6 @@
 <template>
   <div :class="[
-    'bg-gray-200 rounded-lg text-gray-800 pb-8',
+    'bg-gray-200 rounded-lg text-gray-800 pb-0.5',
     `text-${textSize}`,
     `p-${paddingSize}`
   ]" :style="{ width: width }">
