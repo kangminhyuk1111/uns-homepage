@@ -1,25 +1,25 @@
 <!-- src/views/ProductsOverview.vue -->
 <template>
-  <div class="w-full min-h-screen">
+  <div class="page-wrapper">
     <!-- 헤더 -->
     <MainHeader />
 
     <!-- 컨텐츠 영역 - 헤더 높이만큼 여백 추가 -->
-    <div class="pt-20">
+    <div class="content-area">
       <!-- 제품 목록 페이지 헤더 -->
-      <section class="py-16 bg-gray-50">
-        <div class="container-layout mx-auto px-4">
-          <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl text-gray-800 font-bold mb-4">의료 솔루션 제품군</h1>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto">혁신적인 디지털 의료 솔루션으로 의료 환경과 환자 경험을 개선하세요</p>
+      <section class="page-header">
+        <div class="header-container">
+          <div class="header-content">
+            <h1 class="page-title">의료 솔루션 제품군</h1>
+            <p class="page-description">혁신적인 디지털 의료 솔루션으로 의료 환경과 환자 경험을 개선하세요</p>
           </div>
         </div>
       </section>
 
       <!-- 제품 목록 -->
-      <section class="py-16 bg-white">
-        <div class="container-layout mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4">
+      <section class="products-section">
+        <div class="products-container">
+          <div class="products-grid">
             <!-- Baro Paper -->
             <ProductCard
                 title="Baro Paper"
@@ -123,3 +123,88 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+/* 기본 설정 */
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.content-area {
+  padding-top: 80px;
+}
+
+/* 페이지 헤더 */
+.page-header {
+  padding: 64px 0;
+  background-color: #f9fafb;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header-content {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #1f2937;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 3rem;
+  }
+}
+
+.page-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* 제품 섹션 */
+.products-section {
+  padding: 64px 0;
+  background-color: white;
+}
+
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+</style>

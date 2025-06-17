@@ -1,19 +1,19 @@
-<!-- src/components/Home.vue -->
 <template>
-  <div class="pt-20">
+  <div class="home-container">
     <!-- 히어로 섹션 -->
     <MainHeroSection />
 
     <!-- 제품 섹션 -->
-    <section class="py-16 md:py-24 bg-gray-50">
-      <div class="container-layout mx-auto">
-        <div class="text-center mb-12 md:mb-16 px-4">
-          <h2 class="text-3xl text-gray-700 md:text-4xl font-bold mb-4">혁신적인 의료 솔루션</h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">클라우드 기반의 디지털 의료 솔루션으로 병원 운영의 효율성을 높이고 환자
-            경험을 개선하세요.</p>
+    <section class="products-section">
+      <div class="container-layout">
+        <div class="section-header">
+          <h2 class="section-title">혁신적인 의료 솔루션</h2>
+          <p class="section-description">
+            클라우드 기반의 디지털 의료 솔루션으로 병원 운영의 효율성을 높이고 환자 경험을 개선하세요.
+          </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 px-4 sm:px-6 md:px-8">
+        <div class="products-grid">
           <!-- Baro Paper -->
           <ProductCard
               title="Baro Paper"
@@ -96,90 +96,22 @@
         </div>
       </div>
 
-      <div class="text-center mt-12">
-        <router-link to="/products"
-                     class="inline-block px-8 py-3 bg-blue-600 text-white rounded-md text-lg font-medium hover:bg-blue-700 transition shadow-md">
+      <div class="section-cta">
+        <router-link to="/products" class="btn btn-primary">
           모든 제품 보기
         </router-link>
       </div>
     </section>
 
     <!-- 특장점 섹션 -->
-    <section class="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section class="features-section">
       <!-- 배경 패턴 -->
-      <div
-          class="absolute inset-0 opacity-10 z-0"
-          :style="{
-          backgroundImage: 'url(\'/grid-pattern.svg\')',
-          backgroundSize: '30px 30px'
-        }">
-      </div>
+      <div class="bg-pattern"></div>
 
       <!-- 장식적 요소 -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full opacity-10 blur-3xl -translate-x-1/3 -translate-y-1/3"></div>
-      <div class="absolute bottom-0 left-0 w-80 h-80 bg-indigo-400 rounded-full opacity-10 blur-3xl translate-x-1/4 translate-y-1/4"></div>
+      <div class="bg-decoration bg-decoration-1"></div>
+      <div class="bg-decoration bg-decoration-2"></div>
 
-      <div class="container-layout mx-auto relative z-10">
-        <div class="text-center mb-16 px-4">
-          <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-3">의료 환경 혁신</span>
-          <h2 class="text-3xl text-gray-800 md:text-4xl font-bold mb-4">Baro 솔루션의 특장점</h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">혁신적인 기술과 사용자 중심 디자인으로 의료 환경을 변화시킵니다.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 sm:px-6 md:px-8">
-          <!-- 왼쪽 특장점 목록 -->
-          <div class="order-2 md:order-1">
-            <div class="space-y-8">
-              <div class="flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-300 hover:shadow-md">
-                <div class="flex-shrink-0">
-                  <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="ml-6">
-                  <h3 class="text-xl text-gray-800 font-bold mb-2">클라우드 기반 솔루션</h3>
-                  <p class="text-gray-600">별도의 서버 구축 없이 클라우드 기반으로 저렴한 비용으로 서비스를 제공합니다. 언제 어디서나 접근 가능한 편리함을 경험하세요.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start p-4 rounded-xl hover:bg-teal-50 transition-all duration-300 hover:shadow-md">
-                <div class="flex-shrink-0">
-                  <div class="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="ml-6">
-                  <h3 class="text-xl text-gray-800 font-bold mb-2">통합 의료 정보 시스템</h3>
-                  <p class="text-gray-600">환자 정보부터 의료 기록까지 모든 정보를 통합적으로 관리하여 업무 효율성을 극대화합니다.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start p-4 rounded-xl hover:bg-cyan-50 transition-all duration-300 hover:shadow-md">
-                <div class="flex-shrink-0">
-                  <div class="w-14 h-14 rounded-full bg-cyan-100 flex items-center justify-center shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="ml-6">
-                  <h3 class="text-xl text-gray-800 font-bold mb-2">강력한 보안 시스템</h3>
-                  <p class="text-gray-600">단말복합인증, 데이터 암호화, 소스코드 난독화 등 강력한 보안 시스템으로 환자 정보를 안전하게 보호합니다.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 오른쪽 의료 솔루션 시각화 -->
-          <div class="order-1 md:order-2">
-            <MedicalDashboard />
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- CTA 섹션 -->
@@ -212,3 +144,373 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+/* ==== 기본 설정 ==== */
+* {
+  box-sizing: border-box;
+}
+
+/* ==== 메인 컨테이너 ==== */
+.home-container {
+  padding-top: 5rem; /* pt-20 */
+}
+
+/* ==== 컨테이너 레이아웃 ==== */
+.container-layout {
+  max-width: 1280px; /* Tailwind의 container-layout 클래스와 동일 */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ==== 공통 섹션 스타일 ==== */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem; /* mb-12 */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-title {
+  font-size: 1.875rem; /* text-3xl */
+  color: #374151; /* text-gray-700 */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.125rem; /* text-lg */
+  color: #4b5563; /* text-gray-600 */
+  max-width: 48rem; /* max-w-3xl */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem; /* px-3 py-1 */
+  background-color: #dbeafe; /* bg-blue-100 */
+  color: #2563eb; /* text-blue-600 */
+  border-radius: 9999px; /* rounded-full */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  margin-bottom: 0.75rem; /* mb-3 */
+}
+
+/* ==== 제품 섹션 ==== */
+.products-section {
+  padding-top: 4rem; /* py-16 */
+  padding-bottom: 4rem;
+  background-color: #f9fafb; /* bg-gray-50 */
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* grid-cols-1 */
+  gap: 1.5rem; /* gap-6 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 3rem; /* mt-12 */
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem; /* px-8 py-3 */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  text-decoration: none;
+  border-radius: 0.375rem; /* rounded-md */
+  transition: all 0.3s ease; /* transition */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+.btn-primary {
+  background-color: #2563eb; /* bg-blue-600 */
+  color: white; /* text-white */
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+/* ==== 특장점 섹션 ==== */
+.features-section {
+  padding-top: 4rem; /* py-16 */
+  padding-bottom: 4rem;
+  background-color: white; /* bg-white */
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  z-index: 0;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDMwIDAgTCAwIDAgMCAzMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTVlN2ViIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=');
+  background-size: 30px 30px;
+}
+
+.bg-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  filter: blur(4rem); /* blur-3xl */
+  z-index: 0;
+}
+
+.bg-decoration-1 {
+  top: 0;
+  right: 0;
+  width: 24rem; /* w-96 */
+  height: 24rem; /* h-96 */
+  background-color: #60a5fa; /* bg-blue-400 */
+  transform: translate(33.333333%, -33.333333%); /* -translate-x-1/3 -translate-y-1/3 */
+}
+
+.bg-decoration-2 {
+  bottom: 0;
+  left: 0;
+  width: 20rem; /* w-80 */
+  height: 20rem; /* h-80 */
+  background-color: #818cf8; /* bg-indigo-400 */
+  transform: translate(25%, 25%); /* translate-x-1/4 translate-y-1/4 */
+}
+
+.features-content {
+  display: grid;
+  grid-template-columns: 1fr; /* grid-cols-1 */
+  gap: 3rem; /* gap-12 */
+  align-items: center;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.features-list {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* space-y-8 */
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem; /* p-4 */
+  border-radius: 0.75rem; /* rounded-xl */
+  transition: all 0.3s ease; /* transition-all duration-300 */
+}
+
+.feature-item:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-md */
+  transform: translateY(-2px);
+}
+
+.feature-blue:hover {
+  background-color: #eff6ff; /* hover:bg-blue-50 */
+}
+
+.feature-teal:hover {
+  background-color: #f0fdfa; /* hover:bg-teal-50 */
+}
+
+.feature-cyan:hover {
+  background-color: #ecfeff; /* hover:bg-cyan-50 */
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 3.5rem; /* w-14 */
+  height: 3.5rem; /* h-14 */
+  border-radius: 50%; /* rounded-full */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+.feature-blue .feature-icon {
+  background-color: #dbeafe; /* bg-blue-100 */
+  color: #2563eb; /* text-blue-600 */
+}
+
+.feature-teal .feature-icon {
+  background-color: #ccfbf1; /* bg-teal-100 */
+  color: #0d9488; /* text-teal-600 */
+}
+
+.feature-cyan .feature-icon {
+  background-color: #cffafe; /* bg-cyan-100 */
+  color: #0891b2; /* text-cyan-600 */
+}
+
+.feature-content {
+  margin-left: 1.5rem; /* ml-6 */
+}
+
+.feature-title {
+  font-size: 1.25rem; /* text-xl */
+  color: #1f2937; /* text-gray-800 */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.feature-description {
+  color: #4b5563; /* text-gray-600 */
+  margin: 0;
+  line-height: 1.6;
+}
+
+.features-visual {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==== 반응형 디자인 ==== */
+
+/* md: (768px 이상) */
+@media (min-width: 768px) {
+  .home-container {
+    padding-top: 5rem; /* pt-20 (Tailwind에서는 80px이지만 여기서는 5rem 유지) */
+  }
+
+  .products-section,
+  .features-section {
+    padding-top: 6rem; /* md:py-24 */
+    padding-bottom: 6rem;
+  }
+
+  .section-header {
+    margin-bottom: 4rem; /* md:mb-16 */
+    padding-left: 2rem; /* sm:px-6 */
+    padding-right: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.25rem; /* md:text-4xl */
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+    gap: 2rem; /* md:gap-8 */
+    padding-left: 2rem; /* md:px-8 */
+    padding-right: 2rem;
+  }
+
+  .features-content {
+    grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+    padding-left: 2rem; /* md:px-8 */
+    padding-right: 2rem;
+  }
+
+  .features-list {
+    order: 1; /* md:order-1 */
+  }
+
+  .features-visual {
+    order: 2; /* md:order-2 */
+  }
+}
+
+/* lg: (1024px 이상) */
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+  }
+}
+
+/* xl: (1280px 이상) */
+@media (min-width: 1280px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr); /* xl:grid-cols-4 */
+  }
+}
+
+/* sm: (640px 이상) */
+@media (min-width: 640px) {
+  .section-header {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem;
+  }
+
+  .products-grid {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem;
+  }
+
+  .features-content {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem;
+  }
+}
+
+/* ==== 추가 개선사항 ==== */
+
+/* 호버 시 아이콘 애니메이션 */
+.feature-item:hover .feature-icon {
+  transform: scale(1.05);
+}
+
+/* 부드러운 전환 효과 */
+.feature-icon {
+  transition: transform 0.3s ease;
+}
+
+/* 접근성 개선 */
+.btn:focus,
+.feature-item:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* 다크모드 대응 (선택사항) */
+@media (prefers-color-scheme: dark) {
+  .products-section {
+    background-color: #111827;
+  }
+
+  .features-section {
+    background-color: #1f2937;
+  }
+
+  .section-title {
+    color: #f9fafb;
+  }
+
+  .section-description {
+    color: #d1d5db;
+  }
+
+  .feature-title {
+    color: #f9fafb;
+  }
+
+  .feature-description {
+    color: #d1d5db;
+  }
+}
+
+/* 성능 최적화 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>

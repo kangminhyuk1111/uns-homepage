@@ -1,68 +1,62 @@
 <!-- src/components/Support.vue -->
 <template>
-  <div class="pt-20">
+  <div class="support-page">
     <!-- 배너 섹션 -->
-    <section class="bg-gradient-to-r from-indigo-600 to-blue-700 py-20 px-4 relative overflow-hidden">
+    <section class="hero-banner">
       <!-- 배경 패턴 -->
-      <div
-          class="absolute inset-0 opacity-20 z-0"
-          :style="{
-          backgroundImage: 'url(\'/grid-pattern.svg\')',
-          backgroundSize: '30px 30px'
-        }">
-      </div>
+      <div class="background-pattern"></div>
 
       <!-- 장식적 요소 -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full opacity-20 blur-3xl -translate-x-1/3 -translate-y-1/3"></div>
-      <div class="absolute bottom-0 left-0 w-80 h-80 bg-indigo-400 rounded-full opacity-20 blur-3xl translate-x-1/4 translate-y-1/4"></div>
+      <div class="decoration decoration-1"></div>
+      <div class="decoration decoration-2"></div>
 
-      <div class="container-layout mx-auto text-center relative z-10">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">고객 지원 센터</h1>
-        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+      <div class="hero-content">
+        <h1 class="hero-title">고객 지원 센터</h1>
+        <p class="hero-description">
           Baro 솔루션을 이용하시는 고객님들을 위한 지원 서비스를 제공합니다.
         </p>
       </div>
     </section>
 
     <!-- 지원 서비스 개요 섹션 -->
-    <section class="py-16 bg-white">
-      <div class="container-layout mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-blue-50 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <section class="services-overview">
+      <div class="container">
+        <div class="services-grid">
+          <div class="service-card blue">
+            <div class="service-icon blue">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">자주 묻는 질문</h3>
-            <p class="text-gray-600 mb-4">제품별 자주 묻는 질문과 해결 방법을 확인하세요.</p>
-            <a href="#faq-section" class="inline-block px-5 py-2 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700 transition">
+            <h3 class="service-title">자주 묻는 질문</h3>
+            <p class="service-description">제품별 자주 묻는 질문과 해결 방법을 확인하세요.</p>
+            <a href="#faq-section" class="service-button blue">
               FAQ 바로가기
             </a>
           </div>
 
-          <div class="bg-teal-50 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div class="w-16 h-16 mx-auto bg-teal-100 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="service-card teal">
+            <div class="service-icon teal">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">기술 지원 요청</h3>
-            <p class="text-gray-600 mb-4">전문적인 기술 지원이 필요하신가요? 지원 티켓을 제출하세요.</p>
-            <a href="#support-ticket" class="inline-block px-5 py-2 bg-teal-600 text-white rounded-md text-sm font-medium hover:bg-teal-700 transition">
+            <h3 class="service-title">기술 지원 요청</h3>
+            <p class="service-description">전문적인 기술 지원이 필요하신가요? 지원 티켓을 제출하세요.</p>
+            <a href="#support-ticket" class="service-button teal">
               지원 요청하기
             </a>
           </div>
 
-          <div class="bg-indigo-50 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div class="w-16 h-16 mx-auto bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="service-card indigo">
+            <div class="service-icon indigo">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">제품 매뉴얼</h3>
-            <p class="text-gray-600 mb-4">제품별 상세 매뉴얼과 가이드를 확인하세요.</p>
-            <a href="#manuals" class="inline-block px-5 py-2 bg-indigo-600 text-white rounded-md text-sm font-medium hover:bg-indigo-700 transition">
+            <h3 class="service-title">제품 매뉴얼</h3>
+            <p class="service-description">제품별 상세 매뉴얼과 가이드를 확인하세요.</p>
+            <a href="#manuals" class="service-button indigo">
               매뉴얼 보기
             </a>
           </div>
@@ -70,86 +64,39 @@
       </div>
     </section>
 
-    <!-- 지원 상태 대시보드 -->
-<!--    <section class="py-12 bg-gray-50">-->
-<!--      <div class="container-layout mx-auto px-4">-->
-<!--        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">-->
-<!--          <div class="p-6 border-b border-gray-200">-->
-<!--            <h2 class="text-2xl font-bold text-gray-800">시스템 상태</h2>-->
-<!--            <p class="text-gray-600 mt-1">Baro 서비스의 현재 운영 상태입니다.</p>-->
-<!--          </div>-->
-
-<!--          <div class="p-6">-->
-<!--            <div class="space-y-4">-->
-<!--              <div v-for="(service, index) in services" :key="index" class="flex items-center justify-between py-3 border-b border-gray-100">-->
-<!--                <div class="flex items-center">-->
-<!--                  <span class="text-gray-800 font-medium">{{ service.name }}</span>-->
-<!--                </div>-->
-<!--                <div class="flex items-center">-->
-<!--                  <span-->
-<!--                      :class="[-->
-<!--                      'inline-block w-3 h-3 rounded-full mr-2',-->
-<!--                      service.status === 'operational' ? 'bg-green-500' :-->
-<!--                      service.status === 'maintenance' ? 'bg-yellow-500' : 'bg-red-500'-->
-<!--                    ]"-->
-<!--                  ></span>-->
-<!--                  <span-->
-<!--                      :class="[-->
-<!--                      'text-sm font-medium',-->
-<!--                      service.status === 'operational' ? 'text-green-600' :-->
-<!--                      service.status === 'maintenance' ? 'text-yellow-600' : 'text-red-600'-->
-<!--                    ]"-->
-<!--                  >-->
-<!--                    {{ service.statusText }}-->
-<!--                  </span>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="bg-gray-50 p-4 text-center">-->
-<!--            <p class="text-gray-600 text-sm">마지막 업데이트: {{ lastUpdated }}</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-
     <!-- 제품별 FAQ 섹션 -->
-    <section id="faq-section" class="py-16 bg-gray-50">
-      <div class="container-layout mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-800 mb-3">자주 묻는 질문</h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">제품별로 자주 묻는 질문과 답변을 확인하세요.</p>
+    <section id="faq-section" class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">자주 묻는 질문</h2>
+          <p class="section-description">제품별로 자주 묻는 질문과 답변을 확인하세요.</p>
         </div>
 
-        <div class="max-w-4xl mx-auto">
+        <div class="faq-content">
           <!-- 제품 탭 선택 -->
-          <div class="flex flex-wrap justify-center mb-8 gap-2">
+          <div class="product-tabs">
             <button
                 v-for="(product, index) in products"
                 :key="index"
                 @click="setActiveProduct(product.id)"
-                :class="[
-                'px-4 py-2 rounded-full text-sm font-medium transition',
-                activeProduct === product.id
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              ]"
+                class="tab-button"
+                :class="{ active: activeProduct === product.id }"
             >
               {{ product.name }}
             </button>
           </div>
 
           <!-- FAQ 아코디언 -->
-          <div class="space-y-4">
-            <div v-for="(faq, index) in filteredFaqs" :key="index" class="border border-gray-200 rounded-lg overflow-hidden">
+          <div class="faq-accordion">
+            <div v-for="(faq, index) in filteredFaqs" :key="index" class="faq-item">
               <button
                   @click="toggleFaq(index)"
-                  class="flex justify-between items-center w-full px-6 py-4 text-left focus:outline-none"
+                  class="faq-question-button"
               >
-                <span class="text-lg font-medium text-gray-800">{{ faq.question }}</span>
+                <span class="faq-question">{{ faq.question }}</span>
                 <svg
-                    :class="[activeFaq === index ? 'transform rotate-180' : '', 'w-5 h-5 text-gray-500']"
+                    class="faq-icon"
+                    :class="{ rotated: activeFaq === index }"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -159,7 +106,7 @@
               </button>
               <div
                   v-show="activeFaq === index"
-                  class="px-6 pb-4 text-gray-600"
+                  class="faq-answer"
               >
                 <p>{{ faq.answer }}</p>
               </div>
@@ -170,65 +117,65 @@
     </section>
 
     <!-- 기술 지원 요청 섹션 -->
-    <section id="support-ticket" class="py-16 bg-white">
-      <div class="container-layout mx-auto px-4">
-        <div class="max-w-3xl mx-auto">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-3">기술 지원 요청</h2>
-            <p class="text-lg text-gray-600">제품 사용 중 어려움이 있으신가요? 전문 지원팀이 도와드립니다.</p>
+    <section id="support-ticket" class="support-ticket-section">
+      <div class="container">
+        <div class="support-content">
+          <div class="section-header">
+            <h2 class="section-title">기술 지원 요청</h2>
+            <p class="section-description">제품 사용 중 어려움이 있으신가요? 전문 지원팀이 도와드립니다.</p>
           </div>
 
-          <div class="bg-white rounded-xl shadow-lg p-8">
-            <form @submit.prevent="submitSupportRequest" class="space-y-6">
-              <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">이름 *</label>
+          <div class="support-form-container">
+            <form @submit.prevent="submitSupportRequest" class="support-form">
+              <div class="form-group">
+                <label for="name" class="form-label">이름 *</label>
                 <input
                     type="text"
                     id="name"
                     v-model="supportForm.name"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="form-input"
                     required
                 >
               </div>
 
-              <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">이메일 *</label>
+              <div class="form-group">
+                <label for="email" class="form-label">이메일 *</label>
                 <input
                     type="email"
                     id="email"
                     v-model="supportForm.email"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="form-input"
                     required
                 >
               </div>
 
-              <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">전화번호</label>
+              <div class="form-group">
+                <label for="phone" class="form-label">전화번호</label>
                 <input
                     type="tel"
                     id="phone"
                     v-model="supportForm.phone"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="form-input"
                 >
               </div>
 
-              <div>
-                <label for="organization" class="block text-sm font-medium text-gray-700 mb-1">소속 기관/병원 *</label>
+              <div class="form-group">
+                <label for="organization" class="form-label">소속 기관/병원 *</label>
                 <input
                     type="text"
                     id="organization"
                     v-model="supportForm.organization"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="form-input"
                     required
                 >
               </div>
 
-              <div>
-                <label for="product" class="block text-sm font-medium text-gray-700 mb-1">제품 *</label>
+              <div class="form-group">
+                <label for="product" class="form-label">제품 *</label>
                 <select
                     id="product"
                     v-model="supportForm.product"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="form-select"
                     required
                 >
                   <option value="" disabled selected>제품을 선택하세요</option>
@@ -238,12 +185,12 @@
                 </select>
               </div>
 
-              <div>
-                <label for="priority" class="block text-sm font-medium text-gray-700 mb-1">우선 순위</label>
+              <div class="form-group">
+                <label for="priority" class="form-label">우선 순위</label>
                 <select
                     id="priority"
                     v-model="supportForm.priority"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="form-select"
                 >
                   <option value="low">낮음 - 일반 문의</option>
                   <option value="medium">중간 - 기능 장애</option>
@@ -252,36 +199,35 @@
                 </select>
               </div>
 
-              <div>
-                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">제목 *</label>
+              <div class="form-group">
+                <label for="subject" class="form-label">제목 *</label>
                 <input
                     type="text"
                     id="subject"
                     v-model="supportForm.subject"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="form-input"
                     required
                 >
               </div>
 
-              <div>
-                <label for="description" class="block text-sm font-medium text-gray-700 mb-1">문제 설명 *</label>
+              <div class="form-group">
+                <label for="description" class="form-label">문제 설명 *</label>
                 <textarea
                     id="description"
                     v-model="supportForm.description"
                     rows="5"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    class="form-textarea"
                     required
                     placeholder="문제 상황과 발생 시점, 재현 방법 등을 자세히 설명해주세요."
                 ></textarea>
               </div>
 
-              <div>
+              <div class="form-submit">
                 <button
                     type="submit"
                     :disabled="isSubmitting"
-                    :class="['w-full py-3 px-4 text-white font-medium rounded-md shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500',
-                    isSubmitting ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
-                  ]"
+                    class="submit-button"
+                    :class="{ submitting: isSubmitting }"
                 >
                   <span v-if="isSubmitting">제출 중...</span>
                   <span v-else>지원 요청 제출</span>
@@ -293,90 +239,42 @@
       </div>
     </section>
 
-<!--    &lt;!&ndash; 제품 매뉴얼 섹션 &ndash;&gt;-->
-<!--    <section id="manuals" class="py-16 bg-white">-->
-<!--      <div class="container-layout mx-auto px-4">-->
-<!--        <div class="text-center mb-12">-->
-<!--          <h2 class="text-3xl font-bold text-gray-800 mb-3">제품 매뉴얼</h2>-->
-<!--          <p class="text-lg text-gray-600 max-w-3xl mx-auto">각 제품의 상세 매뉴얼과 가이드를 다운로드하세요.</p>-->
-<!--        </div>-->
-
-<!--        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">-->
-<!--          <div v-for="(product, index) in products" :key="index" class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition">-->
-<!--            <div class="flex items-center mb-4">-->
-<!--              <div class="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center mr-4">-->
-<!--                <component :is="getProductIcon(product.id)" class="h-6 w-6 text-blue-600" />-->
-<!--              </div>-->
-<!--              <h3 class="text-xl font-bold text-gray-800">{{ product.name }}</h3>-->
-<!--            </div>-->
-
-<!--            <p class="text-gray-600 mb-6">{{ product.description }}</p>-->
-
-<!--            <div class="space-y-3">-->
-<!--              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">-->
-<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
-<!--                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />-->
-<!--                </svg>-->
-<!--                <span>사용자 매뉴얼</span>-->
-<!--              </a>-->
-
-<!--              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">-->
-<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
-<!--                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />-->
-<!--                </svg>-->
-<!--                <span>설치 가이드 영상</span>-->
-<!--              </a>-->
-
-<!--              <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">-->
-<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
-<!--                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />-->
-<!--                </svg>-->
-<!--                <span>업데이트 기록</span>-->
-<!--              </a>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-
     <!-- 교육 일정 섹션 -->
-    <section class="py-16 bg-gray-50">
-      <div class="container-layout mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-800 mb-3">교육 일정</h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">Baro 솔루션 제품 활용을 위한 교육 일정을 확인하세요.</p>
+    <section class="training-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">교육 일정</h2>
+          <p class="section-description">Baro 솔루션 제품 활용을 위한 교육 일정을 확인하세요.</p>
         </div>
 
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="min-w-full">
-                <thead class="bg-gray-50 border-b border-gray-200">
+        <div class="training-content">
+          <div class="training-table-container">
+            <div class="table-wrapper">
+              <table class="training-table">
+                <thead class="table-header">
                 <tr>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">날짜</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">교육 내용</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">제품</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">유형</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">신청</th>
+                  <th class="table-cell header">날짜</th>
+                  <th class="table-cell header">교육 내용</th>
+                  <th class="table-cell header">제품</th>
+                  <th class="table-cell header">유형</th>
+                  <th class="table-cell header">신청</th>
                 </tr>
                 </thead>
-                <tbody class="divide-y divide-gray-200">
-                <tr v-for="(training, index) in trainings" :key="index" class="hover:bg-gray-50">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ training.date }}</td>
-                  <td class="px-6 py-4 text-sm text-gray-900">{{ training.title }}</td>
-                  <td class="px-6 py-4 text-sm text-gray-900">{{ training.product }}</td>
-                  <td class="px-6 py-4 text-sm text-gray-900">
+                <tbody class="table-body">
+                <tr v-for="(training, index) in trainings" :key="index" class="table-row">
+                  <td class="table-cell">{{ training.date }}</td>
+                  <td class="table-cell">{{ training.title }}</td>
+                  <td class="table-cell">{{ training.product }}</td>
+                  <td class="table-cell">
                       <span
-                          :class="[
-                          'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium',
-                          training.type === '온라인' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'
-                        ]"
+                          class="training-type-badge"
+                          :class="training.type === '온라인' ? 'online' : 'offline'"
                       >
                         {{ training.type }}
                       </span>
                   </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <a href="#" class="text-blue-600 hover:text-blue-900">신청하기</a>
+                  <td class="table-cell">
+                    <a href="#" class="apply-link">신청하기</a>
                   </td>
                 </tr>
                 </tbody>
@@ -388,46 +286,46 @@
     </section>
 
     <!-- 문의 및 연락처 섹션 -->
-    <section class="py-16 bg-white">
-      <div class="container-layout mx-auto px-4">
-        <div class="max-w-5xl mx-auto">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-3">고객 지원팀 연락처</h2>
-            <p class="text-lg text-gray-600">추가 문의사항이 있으시면 언제든지 연락주세요.</p>
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <div class="section-header">
+            <h2 class="section-title">고객 지원팀 연락처</h2>
+            <p class="section-description">추가 문의사항이 있으시면 언제든지 연락주세요.</p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-gray-50 p-6 rounded-xl text-center">
-              <div class="w-14 h-14 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-icon blue">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">전화 지원</h3>
-              <p class="text-gray-600 mb-1">02-556-3528</p>
-              <p class="text-gray-500 text-sm">평일 9:00 - 18:00</p>
+              <h3 class="contact-title">전화 지원</h3>
+              <p class="contact-info">02-556-3528</p>
+              <p class="contact-hours">평일 9:00 - 18:00</p>
             </div>
 
-            <div class="bg-gray-50 p-6 rounded-xl text-center">
-              <div class="w-14 h-14 mx-auto bg-teal-100 rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="contact-card">
+              <div class="contact-icon teal">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">이메일 지원</h3>
-              <p class="text-gray-600 mb-1">mike@unsnetworks.com</p>
-              <p class="text-gray-500 text-sm">평일 8:00 - 17:00</p>
+              <h3 class="contact-title">이메일 지원</h3>
+              <p class="contact-info">mike@unsnetworks.com</p>
+              <p class="contact-hours">평일 8:00 - 17:00</p>
             </div>
 
-            <div class="bg-gray-50 p-6 rounded-xl text-center">
-              <div class="w-14 h-14 mx-auto bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="contact-card">
+              <div class="contact-icon indigo">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">실시간 채팅</h3>
-              <p class="text-gray-600 mb-1">웹사이트 내 채팅 지원</p>
-              <p class="text-gray-500 text-sm">평일 8:00 - 17:00</p>
+              <h3 class="contact-title">실시간 채팅</h3>
+              <p class="contact-info">웹사이트 내 채팅 지원</p>
+              <p class="contact-hours">평일 8:00 - 17:00</p>
             </div>
           </div>
         </div>
@@ -567,18 +465,6 @@ export default {
       }
     ]);
 
-    // 서비스 상태
-    const services = ref([
-      { name: 'Baro Paper 클라우드 서비스', status: 'operational', statusText: '정상 운영 중' },
-      { name: 'Baro Pop 스트리밍 서비스', status: 'operational', statusText: '정상 운영 중' },
-      { name: 'Baro Chart 데이터 서비스', status: 'operational', statusText: '정상 운영 중' },
-      { name: 'Baro Talk 메시징 서비스', status: 'operational', statusText: '정상 운영 중' },
-      { name: 'Baro Call 클라우드 서비스', status: 'maintenance', statusText: '점검 중 (10:00-12:00)' }
-    ]);
-
-    // 마지막 업데이트 시간
-    const lastUpdated = ref('2025년 4월 22일 09:30');
-
     // 교육 일정
     const trainings = ref([
       { date: '2025년 4월 25일', title: 'Baro Paper 기본 사용법', product: 'Baro Paper', type: '온라인' },
@@ -610,7 +496,6 @@ export default {
 
     // 지원 요청 제출 함수
     const submitSupportRequest = () => {
-      // 실제 구현 시 API 호출 등 로직 추가
       isSubmitting.value = true;
 
       // 폼 제출 시뮬레이션
@@ -631,13 +516,6 @@ export default {
       }, 1500);
     };
 
-    // 제품 아이콘 가져오기
-    const getProductIcon = (productId) => {
-      // 실제 구현 시에는 각 제품에 맞는 아이콘 컴포넌트 반환
-      // 아이콘은 별도의 컴포넌트로 구현 필요
-      return 'div'; // 임시로 div 반환
-    };
-
     return {
       activeProduct,
       activeFaq,
@@ -645,19 +523,615 @@ export default {
       isSubmitting,
       products,
       faqs,
-      services,
-      lastUpdated,
       trainings,
       filteredFaqs,
       setActiveProduct,
       toggleFaq,
-      submitSupportRequest,
-      getProductIcon
+      submitSupportRequest
     };
   }
 };
 </script>
 
 <style scoped>
-/* 추가적인 스타일이 필요하면 여기에 작성합니다 */
+/* 기본 설정 */
+.support-page {
+  padding-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* 히어로 배너 */
+.hero-banner {
+  background: linear-gradient(to right, #4f46e5, #1d4ed8);
+  padding: 80px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  z-index: 0;
+  background-image: url('/grid-pattern.svg');
+  background-size: 30px 30px;
+}
+
+.decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(48px);
+}
+
+.decoration-1 {
+  top: 0;
+  right: 0;
+  width: 384px;
+  height: 384px;
+  background-color: #60a5fa;
+  transform: translate(33.333%, -33.333%);
+}
+
+.decoration-2 {
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 320px;
+  background-color: #818cf8;
+  transform: translate(-25%, 25%);
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #dbeafe;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* 서비스 개요 섹션 */
+.services-overview {
+  padding: 64px 0;
+  background-color: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.service-card.blue {
+  background-color: #eff6ff;
+}
+
+.service-card.teal {
+  background-color: #f0fdfa;
+}
+
+.service-card.indigo {
+  background-color: #eef2ff;
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon.blue {
+  background-color: #dbeafe;
+}
+
+.service-icon.teal {
+  background-color: #ccfbf1;
+}
+
+.service-icon.indigo {
+  background-color: #e0e7ff;
+}
+
+.service-icon .icon {
+  width: 32px;
+  height: 32px;
+}
+
+.service-icon.blue .icon {
+  color: #2563eb;
+}
+
+.service-icon.teal .icon {
+  color: #0d9488;
+}
+
+.service-icon.indigo .icon {
+  color: #4f46e5;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.service-description {
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.service-button {
+  display: inline-block;
+  padding: 8px 20px;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-button.blue {
+  background-color: #2563eb;
+}
+
+.service-button.blue:hover {
+  background-color: #1d4ed8;
+}
+
+.service-button.teal {
+  background-color: #0d9488;
+}
+
+.service-button.teal:hover {
+  background-color: #0f766e;
+}
+
+.service-button.indigo {
+  background-color: #4f46e5;
+}
+
+.service-button.indigo:hover {
+  background-color: #4338ca;
+}
+
+/* FAQ 섹션 */
+.faq-section {
+  padding: 64px 0;
+  background-color: #f9fafb;
+}
+
+.faq-content {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.product-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 32px;
+  gap: 8px;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.tab-button:hover {
+  background-color: #e5e7eb;
+}
+
+.tab-button.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 24px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question-button:hover {
+  background-color: #f9fafb;
+}
+
+.faq-question {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  color: #6b7280;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 24px 16px;
+  color: #4b5563;
+}
+
+/* 지원 요청 섹션 */
+.support-ticket-section {
+  padding: 64px 0;
+  background-color: white;
+}
+
+.support-content {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.support-form-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  margin-top: 8px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px 16px;
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #2563eb;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.submit-button.submitting {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.submit-button.submitting:hover {
+  background-color: #93c5fd;
+}
+
+/* 교육 일정 섹션 */
+.training-section {
+  padding: 64px 0;
+  background-color: #f9fafb;
+}
+
+.training-content {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.training-table-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.training-table {
+  width: 100%;
+  min-width: 640px;
+}
+
+.table-header {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-body {
+  background-color: white;
+}
+
+.table-row {
+  transition: background-color 0.3s ease;
+}
+
+.table-row:hover {
+  background-color: #f9fafb;
+}
+
+.table-row:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-cell {
+  padding: 12px 24px;
+  text-align: left;
+}
+
+.table-cell.header {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table-cell:not(.header) {
+  font-size: 0.875rem;
+  color: #1f2937;
+}
+
+.training-type-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.training-type-badge.online {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.training-type-badge.offline {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.apply-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.apply-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* 연락처 섹션 */
+.contact-section {
+  padding: 64px 0;
+  background-color: white;
+}
+
+.contact-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-card {
+  background-color: #f9fafb;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.contact-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon.blue {
+  background-color: #dbeafe;
+}
+
+.contact-icon.teal {
+  background-color: #ccfbf1;
+}
+
+.contact-icon.indigo {
+  background-color: #e0e7ff;
+}
+
+.contact-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-icon.blue .icon {
+  color: #2563eb;
+}
+
+.contact-icon.teal .icon {
+  color: #0d9488;
+}
+
+.contact-icon.indigo .icon {
+  color: #4f46e5;
+}
+
+.contact-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.contact-info {
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.contact-hours {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
 </style>
